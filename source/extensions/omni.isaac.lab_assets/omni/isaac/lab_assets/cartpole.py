@@ -14,7 +14,7 @@ from omni.isaac.lab.utils.assets import ISAACLAB_NUCLEUS_DIR
 ##
 # Configuration
 ##
-
+print(f"path: {ISAACLAB_NUCLEUS_DIR}")
 CARTPOLE_CFG = ArticulationCfg(
     spawn=sim_utils.UsdFileCfg(
         usd_path=f"{ISAACLAB_NUCLEUS_DIR}/Robots/Classic/Cartpole/cartpole.usd",

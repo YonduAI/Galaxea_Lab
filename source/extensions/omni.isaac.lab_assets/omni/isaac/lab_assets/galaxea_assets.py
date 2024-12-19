@@ -78,7 +78,7 @@ T_CFG = RigidObjectCfg(
         rot=(1.0, 0.0, 0.0, 0.0),
     ),
 )
-
+ 
 # bin
 KLT_BIN_CFG: RigidObjectCfg = RigidObjectCfg(
     prim_path="/World/envs/env_.*/Object",

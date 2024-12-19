@@ -16,7 +16,7 @@ from .cartpole_env import CartpoleEnv, CartpoleEnvCfg
 ##
 # Register Gym environments.
 ##
-
+ 
 gym.register(
     id="Isaac-Cartpole-Direct-v0",
     entry_point="omni.isaac.lab_tasks.direct.cartpole:CartpoleEnv",

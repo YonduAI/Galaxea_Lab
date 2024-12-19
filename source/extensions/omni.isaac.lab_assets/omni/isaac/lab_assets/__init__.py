@@ -41,3 +41,4 @@ from .unitree import *
 from .universal_robots import *
 from .galaxea_robots import *
 from .galaxea_assets import *
+from .yondu_assets import *
