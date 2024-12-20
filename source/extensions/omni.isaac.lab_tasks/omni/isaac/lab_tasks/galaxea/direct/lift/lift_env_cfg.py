@@ -44,6 +44,8 @@ from omni.isaac.lab.utils.assets import ISAAC_NUCLEUS_DIR
 from omni.isaac.lab.terrains import TerrainImporterCfg
 
 
+# yondu: so this is just one environment defined here with slight changes for each type of configuration 
+# each of the below environment all inherit from the R1LiftEnvCfg
 @configclass
 class R1LiftEnvCfg(DirectRLEnvCfg):
     # env

@@ -9,7 +9,7 @@ from omni.isaac.lab.sim.schemas.schemas_cfg import RigidBodyPropertiesCfg
 
 
 SHELF_CFG = AssetBaseCfg(
-    prim_path="/World/env1/Shelf",
+    prim_path="/World/envs/env_.*/Shelf",
     spawn=sim_utils.UsdFileCfg(
         usd_path="http://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.2/Isaac/Environments/Hospital/Props/SM_MedShelf_01d.usd",
         scale=(1.0, 1.0, 1.0)
@@ -21,7 +21,7 @@ SHELF_CFG = AssetBaseCfg(
 )
 
 CART_CFG = AssetBaseCfg(
-    prim_path="/World/env1/Cart",
+    prim_path="/World/envs/env_.*/Cart",
     spawn=sim_utils.UsdFileCfg(
         usd_path="http://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.2/Isaac/Environments/Hospital/Props/SM_Cart_01a.usd",
         scale=(0.9, 0.9, 0.9)
@@ -72,5 +72,28 @@ CART_BIN_CFG = RigidObjectCfg(
     init_state=RigidObjectCfg.InitialStateCfg(
         pos=(0, -1.3, 1.21179),
         rot=(1.0, 0, 0, 1.0),
+    ),
+)
+
+# DEMO ITEM ASSET: 
+BANANA_CFG = RigidObjectCfg(
+    prim_path="/World/envs/env_.*/banana",
+    spawn=sim_utils.UsdFileCfg(
+        # usd_path=f"/home/user/zhr_workspace/IsaacsimAsset/objects/fruits/fruit_v2/banana.usd",
+        usd_path=f"{ISAACLAB_ASSETS_DATA_DIR}/Props/fruits/banana.usd",
+        scale=(1.0, 1.0, 1.0),
+        rigid_props=sim_utils.RigidBodyPropertiesCfg(
+            solver_position_iteration_count=16,
+            solver_velocity_iteration_count=1,
+            max_angular_velocity=1000.0,
+            max_linear_velocity=1000.0,
+            max_depenetration_velocity=5.0,
+            disable_gravity=False,
+            rigid_body_enabled=True
+        ),
+    ),
+    init_state=RigidObjectCfg.InitialStateCfg(
+        pos=(0.36, -0.5, 1.0),
+        rot=(1.0, 0.0, 0.0, 0.0),
     ),
 )
