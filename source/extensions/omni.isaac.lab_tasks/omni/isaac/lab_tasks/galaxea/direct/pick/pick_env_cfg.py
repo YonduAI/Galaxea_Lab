@@ -10,7 +10,10 @@ from omni.isaac.lab_assets import (
     SHELF_BIN_CFG,
     SHELF_CFG,
     CART_CFG,
-    CART_BIN_CFG
+    CART_BIN_CFG,
+    GALAXEA_R1_HIGH_PD_CFG,
+    GALAXEA_CAMERA_CFG,
+    BANANA_CFG
 )
 
 from omni.isaac.lab.sensors import CameraCfg
@@ -152,12 +155,14 @@ class PickEnvCfg(DirectRLEnvCfg):
 
 
 @configclass
-class YonduBinPickEnv(PickEnvCfg):
-    shelf: AssetBaseCfg = SHELF_CFG.copy()
+class YonduBinPickEnvCfg(PickEnvCfg):
+    shelf_cfg: AssetBaseCfg = SHELF_CFG.copy()
 
-    cart: AssetBaseCfg = CART_CFG.copy()
+    cart_cfg: AssetBaseCfg = CART_CFG.copy()
 
-    cart_bin: RigidObjectCfg = CART_BIN_CFG.copy()
+    cart_bin_cfg: RigidObjectCfg = CART_BIN_CFG.copy()
 
-    shelf_bin: RigidObjectCfg = SHELF_BIN_CFG.copy()
+    shelf_bin_cfg: RigidObjectCfg = SHELF_BIN_CFG.copy()
+
+    banana_cfg = BANANA_CFG.copy()
 
