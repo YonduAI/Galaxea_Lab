@@ -94,40 +94,41 @@ def main():
     obs, _ = env.reset()
 
     # create state machine
-    sm = PickAndLiftSm(
-        args_cli.task,
-        env_cfg.sim.dt * env_cfg.decimation,
-        env.unwrapped.num_envs,
-        env.unwrapped.device,
-    )
+    # sm = PickAndLiftSm(
+    #     args_cli.task,
+    #     env_cfg.sim.dt * env_cfg.decimation,
+    #     env.unwrapped.num_envs,
+    #     env.unwrapped.device,
+    # )
+    while True:
+        continue
+    # count = 0
+    # while simulation_app.is_running():
+    #     # run everything in inference mode
+    #     with torch.inference_mode():
+    #         # get goal position
+    #         goal_pos = obs["policy"]["goal_pose"][..., :3]
+    #         # generate actions
+    #         actions = sm.generate_actions(env, goal_pos)
 
-    count = 0
-    while simulation_app.is_running():
-        # run everything in inference mode
-        with torch.inference_mode():
-            # get goal position
-            goal_pos = obs["policy"]["goal_pose"][..., :3]
-            # generate actions
-            actions = sm.generate_actions(env, goal_pos)
+    #         # step environment
+    #         obs, reward, terminated, truncated, info = env.step(actions)
 
-            # step environment
-            obs, reward, terminated, truncated, info = env.step(actions)
+    #         # reset state machine
+    #         if truncated.any() or terminated.any():
+    #             dones = truncated | terminated
+    #             reset_idx = dones.nonzero(as_tuple=False).squeeze(-1)
+    #             # print(
+    #             #     "count: {}\nterminated: {}\ntruncated: {}\ndone: {}\nreset_idx:{}".format(
+    #             #         count, terminated, truncated, dones, reset_idx
+    #             #     )
+    #             # )
+    #             sm.reset_idx(reset_idx)
 
-            # reset state machine
-            if truncated.any() or terminated.any():
-                dones = truncated | terminated
-                reset_idx = dones.nonzero(as_tuple=False).squeeze(-1)
-                # print(
-                #     "count: {}\nterminated: {}\ntruncated: {}\ndone: {}\nreset_idx:{}".format(
-                #         count, terminated, truncated, dones, reset_idx
-                #     )
-                # )
-                sm.reset_idx(reset_idx)
+    #         count += 1
 
-            count += 1
-
-    # close the environment
-    env.close()
+    # # close the environment
+    # env.close()
 
 
 if __name__ == "__main__":

@@ -97,7 +97,7 @@ def main():
     sim_cfg = sim_utils.SimulationCfg()
     sim = SimulationContext(sim_cfg)
     sim.set_camera_view([3.5, 0.0, 3.2], [0.0, 0.0, 0.5])
-    scene_cfg = YonduSceneCfg(num_envs=args_cli.num_envs, env_spacing=2.5)
+    scene_cfg = YonduSceneCfg(num_envs=args_cli.num_envs, env_spacing=5)
     scene = InteractiveScene(scene_cfg)
     sim.reset()
     print("[INFO]: Setup complete...")

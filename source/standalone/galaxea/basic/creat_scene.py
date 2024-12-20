@@ -35,7 +35,7 @@ from omni.isaac.lab_assets import (
     LOW_FULL_DESK_CFG,
 )
 
-
+ 
 @configclass
 class R1SceneCfg(InteractiveSceneCfg):
     """Configuration for a galaxea-R1 scene."""
