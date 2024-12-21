@@ -74,7 +74,7 @@ GALAXEA_R1_CFG = ArticulationCfg(
     },
     soft_joint_pos_limit_factor=1.0,
 )
-
+ 
 GALAXEA_R1_HIGH_PD_CFG = GALAXEA_R1_CFG.copy()
 GALAXEA_R1_HIGH_PD_CFG.spawn.rigid_props.disable_gravity = False
 GALAXEA_R1_HIGH_PD_CFG.actuators["r1_arms"].stiffness = 400.0

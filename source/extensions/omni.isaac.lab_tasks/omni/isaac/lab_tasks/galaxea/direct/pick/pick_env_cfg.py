@@ -13,7 +13,8 @@ from omni.isaac.lab_assets import (
     CART_BIN_CFG,
     GALAXEA_R1_HIGH_PD_CFG,
     GALAXEA_CAMERA_CFG,
-    BANANA_CFG
+    BANANA_CFG,
+    CARROT_CFG
 )
 
 from omni.isaac.lab.sensors import CameraCfg
@@ -165,4 +166,6 @@ class YonduBinPickEnvCfg(PickEnvCfg):
     shelf_bin_cfg: RigidObjectCfg = SHELF_BIN_CFG.copy()
 
     banana_cfg = BANANA_CFG.copy()
+
+    carrot_cfg = CARROT_CFG.copy()
 
