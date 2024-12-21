@@ -2,7 +2,7 @@
 # All rights reserved.
 #
 # SPDX-License-Identifier: BSD-3-Clause
- 
+
 """Script to train RL agent with Stable Baselines3.
 
 Since Stable-Baselines3 does not support buffers living on GPU directly,
@@ -67,7 +67,7 @@ def main():
     env_cfg = parse_env_cfg(
         args_cli.task, use_gpu=not args_cli.cpu, num_envs=args_cli.num_envs, use_fabric=not args_cli.disable_fabric
     )
-    agent_cfg = load_cfg_from_registry(args_cli.task, "sb3_cfg_entry_point")
+    agent_cfg = load_cfg_from_registry(args_cli.task, "omni.isaac.lab_tasks.galaxea.direct.pick:YonduBinPickingEnv")
 
     # override configuration with command line arguments
     if args_cli.seed is not None:

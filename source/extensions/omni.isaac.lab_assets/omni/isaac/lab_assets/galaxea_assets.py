@@ -220,7 +220,7 @@ TABLE_CFG = RigidObjectCfg(
         retain_accelerations=False,  # 防止物体在碰撞后受到加速度影响
     ),
     ),
-)
+) 
 
 SEKTION_CABINET_CFG: AssetBaseCfg = AssetBaseCfg(
     prim_path="/World/envs/env_.*/Table",
