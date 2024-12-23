@@ -1,2 +1,12 @@
 *.pyc
+isaac-sim-assets-1-4.0.0/Assets/Isaac/4.0/Isaac/
+isaac-sim-assets-1-4.0.0/Assets/Isaac/4.0/Isaac/Environments
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+logs/
+*.egg-info/
+*.swp
+*.symlink
 _isaac_sim
